@@ -20,7 +20,7 @@ import java.io.IOException;
 
 @Slf4j
 @Component
-public class JwtAuthentiationFillter extends OncePerRequestFilter {
+public class JwtAuthenticationFillter extends OncePerRequestFilter {
 
     @Autowired
     private TokenProvider tokenProvider;
@@ -55,7 +55,7 @@ public class JwtAuthentiationFillter extends OncePerRequestFilter {
     }
 
     private String parseBearerToken(HttpServletRequest request) {
-        // Http 요청의 헤더를 파싱해 Bearer 토큰ㅇ르 리턴
+        // Http 요청의 헤더를 파싱해 Bearer 토큰을 리턴
         String bearerToken = request.getHeader("Authorization");
 
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer")) {
