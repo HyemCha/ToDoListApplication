@@ -5,7 +5,7 @@ ___
 - React.js
 
 ## Back-end
-- MySQL
+- H2 Database
 - Spring Boot
 - JPA
 - AWS
